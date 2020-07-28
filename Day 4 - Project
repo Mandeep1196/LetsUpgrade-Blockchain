@@ -1,0 +1,34 @@
+SOLIDITY CODE
+pragma solidity >= 0.4.12 < 0.6.12;
+
+contract ReportCard{
+    
+    string public StudentName;
+    string public RollNo;
+    string public Year;
+    uint public TotalMarks;
+    string public Status;
+    
+    function ReportCard(string newStudentName, string newRollNo, string newYear, uint newTotalMarks, string newStatus) public{
+        StudentName = newStudentName;
+        RollNo = newRollNo;
+        Year = newYear;
+        TotalMarks = newTotalMarks;
+        Status = newStatus;
+    }
+    function setDetails(string newStudentName, string newRollNo, string newYear, uint newTotalMarks, string newStatus) public{
+        StudentName = newStudentName;
+        RollNo = newRollNo;
+        Year = newYear;
+        TotalMarks = newTotalMarks;
+        Status = newStatus;
+    }
+    function getDetails() public view returns(string,string,string,uint,string){
+        return (StudentName,RollNo,Year,TotalMarks,Status);
+    }
+ 
+}
+
+
+https://ropsten.etherscan.io/tx/0x7310448dbd997c9d2d62efc9f525b74bb991a071bf0bd442e385386a6059cb0c
+Txn Address - 0xfBd90E753cD4350435A630Cd1F0Fe986d2c93548
